@@ -46,7 +46,7 @@ Python3
 2. 配置腾讯云环境变量;
 ```
 export TENCENTCLOUD_SECRET_ID=你的SecretId
-xport TENCENTCLOUD_SECRET_KEY=你的SecretKey
+export TENCENTCLOUD_SECRET_KEY=你的SecretKey
 ```
 
 3. 运行 `python3 senbatsu/main.py`,屏幕上会有类似输出如下
