@@ -92,8 +92,10 @@ def submit(nickname='测试',
     res = requests.post(url, headers=header, data=json.dumps(payload))
     newCookies = requests.utils.dict_from_cookiejar(res.cookies)
     cookies['_gd_session'] = newCookies['_gd_session']
-    print(json.loads(res.content))
+    if res.status_code == 200:
+        return res
+    else:
+        return False
 
 
 initReq()
-submit()
