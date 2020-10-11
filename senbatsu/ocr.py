@@ -2,7 +2,6 @@ import base64
 import requests
 import os
 import json
-from time import sleep
 import csv
 
 from tencentcloud.common import credential
@@ -28,16 +27,16 @@ def ocrFiles():
 
         clientProfile = ClientProfile()
         clientProfile.httpProfile = httpProfile
-        client = ocr_client.OcrClient(cred, "ap-guangzhou", clientProfile)
+        client = ocr_client.OcrClient(cred, "ap-shanghai", clientProfile)
 
         for filename in resourceList:
             postDict = { 'filename': filename, 'ocrStatus': False, 'postKey': '' }
             with open("./resources/%s" % filename, 'rb') as file:
-                req = models.GeneralFastOCRRequest()
+                req = models.GeneralEfficientOCRRequest()
                 content = file.read()
                 b64 = str(base64.b64encode(content), 'utf-8')
                 req.ImageBase64 = b64
-                resp = client.GeneralFastOCR(req)
+                resp = client.GeneralEfficientOCR(req)
                 data = json.loads(resp.to_json_string())
                 # print(resp.to_json_string())
                 for index, value in enumerate(data['TextDetections']):
