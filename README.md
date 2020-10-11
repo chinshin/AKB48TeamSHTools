@@ -39,7 +39,7 @@ Python3
 
 ## 总选投票使用简介
 
-1. 拍照片，全部放在`resources`文件夹下，一定为JPG格式,不然自己去改`senbatsu/ocr.py`第20行;
+1. 拍照片，全部放在`resources`文件夹下，一定为JPG格式,不然自己去改`senbatsu/ocr.py`[第20行](https://github.com/chinshin/AKB48TeamSHTools/blob/main/senbatsu/ocr.py#L20);
 
 样张(务必要把官方网站和投票地址两行拍进去)：![image](https://user-images.githubusercontent.com/14086338/95672256-ef8d0900-0bd1-11eb-92aa-7eee813a0633.png)
 
@@ -71,7 +71,7 @@ output.csv 输出类似如下
 
 自动投票功能还在调试，稍后上线。
 
-**注意:** `submit.py` Line 48 写死了当前投票的默认值，要测试记得改一下，不然我就帮甜甜谢谢你的投票了。
+**注意:** `main.py` [Line 22](https://github.com/chinshin/AKB48TeamSHTools/blob/main/senbatsu/main.py#L22) 写死了当前投票的默认值，要测试的人记得改一下，不然我就帮甜甜谢谢你的投票了。
 
 ## 已知问题
 
