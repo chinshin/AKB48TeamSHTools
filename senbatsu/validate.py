@@ -45,7 +45,10 @@ def initReq():
     cookies['csrf_token'] = csrf
 
 
-def validateByKey(key='测试'):
+def validateByKey(key=''):
+    if not key:
+        print('key ', key, ' 无效')
+        return False
     global cookies
     global csrf
     url = 'http://senbatsu.akb48-china.com/graphql/f/opf0Si'
